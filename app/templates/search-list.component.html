@@ -1,0 +1,39 @@
+<article>
+        <div class="row" id="search-container">
+        <form class="form-horizontal">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input type="search" placeholder="Search" class="form-control" [(ngModel)]="query" name="search" />
+                        <span class="input-group-addon" (click)="clearQuery()">X</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+
+        <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let song of (songs|searchsongs:query)">
+                    <div class="row">
+                        <div class="col-xs-7">
+                             <a [routerLink]="['/song',song._id ]">{{ song.name | uppercase}}</a>
+                   	    </div>
+                        
+                        <div class="col-xs-2 key-div">
+                                <a [routerLink]="['/song',song._id ]">
+                                    <span class="badge">{{ song.key }}</span>
+                                </a>
+                         </div>
+
+                    <div class="col-xs-3">
+                         <span class="glyphicon glyphicon-trash" (click)="onDelete(song._id)"></span>
+                    </div>
+
+                    </div>
+                </li>
+                
+            </ul>
+
+        </div>
+    </article>

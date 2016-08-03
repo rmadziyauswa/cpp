@@ -1,0 +1,49 @@
+#view-song-header h2
+{
+    font-size: 2.5em;
+    color: #f70528;
+
+}
+
+
+h4.song-name, h4.song-key
+{
+    
+        color: #1004a7;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin: 10px 0;
+}
+
+
+article pre
+{
+    border: 1px solid #0a0a0a;
+    background: #00092e;
+    color: red;
+    font-size: 1.7em;
+        margin: 25px 0;
+}
+
+
+.song-view
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.song-key span
+{
+    color: red;
+}
+
+
+span.text-danger
+{
+       font-size: 0.8em;
+    margin-bottom: 20px;
+    display: block;
+
+}

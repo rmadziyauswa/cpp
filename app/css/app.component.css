@@ -1,0 +1,9 @@
+div[role='main']
+{
+    max-width: 435px;
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    padding: 5px 20px;
+    border: 1px solid #e4e4e4;
+}

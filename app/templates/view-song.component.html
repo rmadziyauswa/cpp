@@ -1,0 +1,22 @@
+<div class="song-view">
+
+<header id="view-song-header">
+    <h2>Song</h2>
+</header>
+<article *ngIf="song">
+    <h4 class="song-name">Name : {{ song.name }}</h4>
+    <h4 class="song-key">Key : <span>{{ song.key }} </span></h4>
+    <pre>{{ song.progression }}</pre>
+    <span class="text-danger">
+        {{song.dateModified | date:"medium" }}
+    </span>
+
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+        <a class="btn btn-warning" [routerLink]="['/edit',song._id]">Edit</a>
+        <button class="btn btn-danger" (click)="onDelete(song._id)">Delete</button>
+        </div>
+    </div>
+</article>
+
+</div>
